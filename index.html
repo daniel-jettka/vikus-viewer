@@ -152,7 +152,12 @@ cpietsch@gmail.com
                       -
                     </div>
                     <div v-else-if="item[entry.source].split('.').pop() === 'mp3'">
-                      <a :href="item[entry.source]" target="_blank" class="overlayLink audio noIcon" data-overlay-left-right-margin="10%" data-overlay-top-bottom-margin="10%">
+                      <a :href="item[entry.source]" target="_blank" class="overlayLink audio noIcon" data-overlay-left-right-margin="25%" data-overlay-top-bottom-margin="25%">
+                        {{ item[entry.source].split('/').pop() }}
+                      </a>
+                    </div>
+                    <div v-else-if="item[entry.source].split('.').pop() === 'mp4'">
+                      <a :href="item[entry.source]" target="_blank" class="overlayLink video noIcon" data-overlay-left-right-margin="10%" data-overlay-top-bottom-margin="10%">
                         {{ item[entry.source].split('/').pop() }}
                       </a>
                     </div>

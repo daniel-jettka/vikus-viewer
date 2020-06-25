@@ -54,7 +54,14 @@
 							+'<audio controls="controls">'
 							+'<source src="'+hrefAttr+'" />'
 							+'</audio></div>');
-					} else{
+					}
+                                        else if(hrefAttr.split('.').pop() == 'mp4'){
+                                                $('#overlayBoxContent', window.top.document).html('<div style="height: 100%; display: flex; justify-content: center; align-items: center;">'
+                                                        +'<video controls="controls">'
+                                                        +'<source src="'+hrefAttr+'" />'
+                                                        +'</video></div>');
+                                        }
+                                        else{
 						$('#overlayBoxContent', window.top.document).html('<iframe width="100%" height="99%" src="'+hrefAttr+'" style="background-color:white;"></iframe>');
       					}
 				}
